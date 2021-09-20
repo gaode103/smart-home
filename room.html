@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Room</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script lang="JavaScript" src="js/moment.min.js"></script>
+  <script lang="JavaScript" src="chartjs/Chart.js"></script>
+  <script lang="JavaScript" src="js/lib.js"></script>
+  <script lang="JavaScript" src="js/data-loader.js"></script>
+  <script lang="JavaScript" src="js/data-view.js"></script>
+
+  <link rel="stylesheet" href="css/room.css">
+
+</head>
+<body>
+<div class="room-panel">
+  <div class="header">
+    <div id="label"></div>
+  </div>
+  <div class="temperature-panel">
+    <div id="currentTemperature"></div>
+    <div id="isHeating"></div>
+    <div id="targetTemperature"></div>
+  </div>
+  <div id="instantRequest"></div>
+  <div id="schedule"></div>
+</div>
+<div class="room-chart">
+  <canvas id="room-chart"></canvas>
+</div>
+<div id="centerpoint">
+  <div id="dialogContainer"></div>
+</div>
+<script lang="JavaScript" src="js/room-temperature-request-dialog.js"></script>
+<script lang="JavaScript" src="js/room.js"></script>
+<script lang="JavaScript" src="js/room-chart.js"></script>
+</body>
+</html>

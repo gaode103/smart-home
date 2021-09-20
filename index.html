@@ -1,3 +1,50 @@
-<html>
-    <body></body>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Smart Home</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="./manifest.json">
+</head>
+<body>
+<div class="header"><h3>Smart H<span id="network_request">o</span>me</h3></div>
+<div id="container" class="container">
+  <div class="card">
+    <div class="card-title">Mode</div>
+    <div class="card-body" style="padding-top: 20px">
+      <input type="radio" name="operationMode" title="Normal" value="false" onchange="setHoliday(event)" id="normalMode"><label for="normalMode">Normal</label>
+      <input type="radio" name="operationMode" title="Holiday" value="true" onchange="setHoliday(event)" id="holidayMode"><label for="holidayMode">Holiday</label>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title">Ventilation</div>
+    <div class="card-body">
+      <div style="margin-top:20px; border-bottom: 4px double"><span class="material-icons" style="font-size: 16px;">south</span><span id="intake-temperature"></span><span class="material-icons" style="font-size: 16px;">north</span><span id="exhaust-temperature"></span></div>
+      <div style="margin-bottom: 24px"><span class="material-icons" style="font-size: 16px;">south</span><span id="to-room-temperature"></span><span class="material-icons" style="font-size: 16px;">north</span><span id="from-room-temperature"></span></div>
+      <div id="ventilationView" style="font-size: 12px;"></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title">Heating</div>
+    <div class="card-body" style="padding-top: 30px; font-size: 32px" id="boilerView">
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title">Cylinder</div>
+    <div class="card-body" style="padding-top: 42px; font-size: 24px" id="cylinderView">
+    </div>
+  </div>
+</div>
+<div id="centerpoint">
+  <div id="dialogContainer"></div>
+</div>
+<div id="json" class="json"></div>
+<script type="text/javascript" src="js/lib.js"></script>
+<script type="text/javascript" src="js/room-temperature-request-dialog.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
 </html>
